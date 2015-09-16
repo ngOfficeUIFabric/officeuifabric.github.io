@@ -1,0 +1,85 @@
+body{
+  margin:0;
+  padding:0;
+}
+
+/* >>>>> MAIN PAGE ELEMENTS <<<<< */
+#page-header {
+  background-color: #0078d7; /* ms-bgColor-themePrimary */
+  color:white; /* ms-fontColor-white */
+  padding-top: 15px; 
+  padding-bottom: 15px; 
+  text-align:center;
+  width:100%;
+}
+
+#page-main {
+  text-align: left;
+  padding-right:25px;
+}
+#page-footer {
+  background-color: #005a9e; /* ms-bgColor-themeDark */
+  margin-top:25px;
+  margin-bottom:25px;
+  padding-top:15px;
+  padding-bottom:15px;
+  text-align:center;
+}
+
+#brand-logo{
+  display:inline-block;
+}
+#brand-name {
+  display:inline-block;
+  margin-left:15px;
+}
+#site-tagline {
+  display:inline-block;
+  margin-left:75px;
+  width:360px;
+  text-align: left;
+}
+
+/* global navigation */
+nav {
+  margin: 0;
+  background: #005a9e; /* ms-bgColor-themeDark */
+  text-align:right;
+}
+#global-nav {
+  list-style: none;
+  margin-right:50px;
+}
+#global-nav li {
+  display: inline-block;
+}
+#global-nav a {
+  text-decoration: none;
+  display: block;
+  text-align:center;
+  padding: 10px;
+  color: white; /* ms-fontColor-white */
+}
+#global-nav li a:hover {
+  background: #004578; /* ms-bgColor-themeDarker */
+}
+#global-nav li:last-of-type a {
+  border-bottom: none;
+}
+
+/* local navigation */
+#local-nav {
+  margin: 15px 50px 0px 0px;
+  text-align:right;
+}
+#local-nav ul {
+  list-style: none;
+}
+#local-nav ul a {
+  text-decoration: none;
+  display:block;
+  padding:0.5em;
+}
+#local-nav li:last-of-type a {
+  border-bottom: none;
+}

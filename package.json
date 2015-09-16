@@ -1,0 +1,24 @@
+{
+  "name": "officeuifabric.github.io",
+  "version": "0.1.0",
+  "description": "Site containing examples & samples of the Office UI Fabric, used to compare the Angular directives against.",
+  "author": {
+    "name": "Andrew Connell",
+    "email": "me@andrewconnell.com",
+    "url": "http://www.andrewconnell.com"
+  },
+  "license": "MIT",
+  "main": "index.html",
+  "homepage": "http://officeuifabric.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngOfficeUIFabric/officeuifabric.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.9.3",
+    "gulp": "^3.9.0"
+  }
+}

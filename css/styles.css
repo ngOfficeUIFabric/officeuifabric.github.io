@@ -83,3 +83,21 @@ nav {
 #local-nav li:last-of-type a {
   border-bottom: none;
 }
+
+
+/* icon page tweaks */
+.icon-list ul li {
+  float: left;
+  font-size: 11px;
+  color: black;
+  width:15%;
+  text-align: center;
+  height: 100px;
+  padding:10px;
+  overflow:hidden;
+}
+.icon-list ul li .ms-Icon {
+  font-size:35px;
+  display:block;
+  margin:10px auto;
+}

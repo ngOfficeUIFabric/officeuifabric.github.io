@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>Office UI Fabric - Features - Icons</title>
+  <meta charset="UTF-8">
+  <!-- fav icons -->
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+  
+  <!-- azure application insights -->
+  <script src="/js/azure-app-insights.js" type="text/javascript"></script>
+  
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+<div class="ms-Grid">
+  <!-- header -->
+  <header id="page-header" class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <div id="brand-logo">
+      <img src="/img/logo_fabric_glyph.svg" alt="Office Fabric UI" height="88" />
+    </div>
+    <div id="brand-name">
+      <img src="/img/logo_fabric_text.svg" alt="Office Fabric UI" width="137" />
+    </div>
+    <div id="site-tagline" class="ms-font-l ms-fontColor-white ms-fontWeight-light">
+      Demos of the front-end framework for building experiences using Office, Office 365 &amp; SharePoint.
+    </div>
+  </header>
+
+  <!-- navigation -->
+  <nav class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <ul id="global-nav">
+      <li class="ms-font-l ms-fontWeight-light"><a href="/">Home</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/features">Features</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/components">Components</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/resources.html">Resources</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/status.html">Status</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/contribute.html">Contribute!</a></li>
+    </ul>
+  </nav>
+
+  <div class="ms-Grid-row">
+    <!-- side-nav -->
+    <aside id="local-nav" class="ms-Grid-col ms-u-sm-3 ">
+      <ul>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/7">Animations <i class="ms-Icon ms-Icon--checkboxEmpty" aria-hidden="true"></i></a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/5">Color <i class="ms-Icon ms-Icon--checkboxEmpty" aria-hidden="true"></i></a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="/features/icons.html">Icons <i class="ms-Icon ms-Icon--checkbox" aria-hidden="true"></i></a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/9">Localization Support <i class="ms-Icon ms-Icon--checkboxEmpty" aria-hidden="true"></i></a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/8">Responsive Grid <i class="ms-Icon ms-Icon--checkboxEmpty" aria-hidden="true"></i></a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/4">Typography <i class="ms-Icon ms-Icon--checkboxEmpty" aria-hidden="true"></i></a></li>
+      </ul>
+    </aside>
+  
+    <!-- page body -->
+    <article id="page-main" class="ms-Grid-col ms-u-sm9 ms-font-m">
+      <p class="ms-font-su">Features <i class="ms-Icon ms-Icon--caretRight" aria-hidden="true"></i> Icons</p>
+      <p class="ms-font-l">The Office UI Fabric includes it's own iconography implemented as a custom font. This contains glyphs that can be treated just like other fonts in the sense that you can manipulate the size, color, style and orientation for localization.</p>
+      
+      <p class="ms-font-xxl">Usage</p>
+      <p class="ms-font-l">To use one of the fonts you add a few classes to the HTML element <code>&lt;i /&gt;</code> like so:</p>
+      <code>&lt;i class="ms-Icon ms-Icon--group" aria-hidden="true" /&gt;</code>
+      <p class="ms-font-l">Will render the following: <i class="ms-Icon ms-Icon--group" aria-hidden="true" /></i></p>
+      
+      <p class="ms-font-xxl">Accessibility</p>
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--infoCircle ms-font-xxl" style="color:blue" aria-hidden="true" /></i> Note the presence of the <span class="ms-fontWeight-semibold">aria-hidden</span> attribute. Including this will tell screen readers from reading the icon. <a href="https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md">Microosft's guidance</a> here is as follows:</p>
+      <blockquote class="ms-font-l ms-fontWeight-light">"In cases where meaning is conveyed only through the icon, such as an icon-only navigation bar, be sure to apply an <span class="ms-fontWeight-semibold">aria-hidden</span> to the button for accessibility."</blockquote>
+
+      <p class="ms-font-xxl">Icon Fonts</p>
+      <p class="ms-font-l">The icons are provided using the following font files:</p>
+      <ul>
+        <li><a class="ms-font-l" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.eot">office365icons.eot</a></li>
+        <li><a class="ms-font-l" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.ttf">office365icons.ttf</a></li>
+        <li><a class="ms-font-l" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.woff">office365icons.woff</a></li>
+        <li><a class="ms-font-l" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.svg">office365icons.svg</a></li>
+      </ul>
+      
+      <p class="ms-font-xxl">Icon Inventory</p>
+      <p class="ms-font-l">The following icons are included in the Office UI Fabric base CSS.</p>
+
+      <div class="icon-list clearfix">
+        <ul>
+          <li><i class="ms-Icon ms-Icon--alert"></i><span class="ms-font-m">.ms-Icon--alert</span></li>
+          <li><i class="ms-Icon ms-Icon--balloon"></i><span class="ms-font-m">.ms-Icon--balloon</span></li>
+          <li><i class="ms-Icon ms-Icon--bell"></i><span class="ms-font-m">.ms-Icon--bell</span></li>
+          <li><i class="ms-Icon ms-Icon--bold"></i><span class="ms-font-m">.ms-Icon--bold</span></li>
+          <li><i class="ms-Icon ms-Icon--books"></i><span class="ms-font-m">.ms-Icon--books</span></li>
+          <li><i class="ms-Icon ms-Icon--cake"></i><span class="ms-font-m">.ms-Icon--cake</span></li>
+          <li><i class="ms-Icon ms-Icon--caretDown"></i><span class="ms-font-m">.ms-Icon--caretDown</span></li>
+          <li><i class="ms-Icon ms-Icon--caretDownLeft"></i><span class="ms-font-m">.ms-Icon--caretDownLeft</span></li>
+          <li><i class="ms-Icon ms-Icon--caretDownOutline"></i><span class="ms-font-m">.ms-Icon--caretDownOutline</span></li>
+          <li><i class="ms-Icon ms-Icon--caretDownRight"></i><span class="ms-font-m">.ms-Icon--caretDownRight</span></li>
+          <li><i class="ms-Icon ms-Icon--caretLeft"></i><span class="ms-font-m">.ms-Icon--caretLeft</span></li>
+          <li><i class="ms-Icon ms-Icon--caretLeftOutline"></i><span class="ms-font-m">.ms-Icon--caretLeftOutline</span></li>
+          <li><i class="ms-Icon ms-Icon--caretRight"></i><span class="ms-font-m">.ms-Icon--caretRight</span></li>
+          <li><i class="ms-Icon ms-Icon--caretRightOutline"></i><span class="ms-font-m">.ms-Icon--caretRightOutline</span></li>
+          <li><i class="ms-Icon ms-Icon--caretUpLeft"></i><span class="ms-font-m">.ms-Icon--caretUpLeft</span></li>
+          <li><i class="ms-Icon ms-Icon--caretUpRight"></i><span class="ms-font-m">.ms-Icon--caretUpRight</span></li>
+          <li><i class="ms-Icon ms-Icon--cart"></i><span class="ms-font-m">.ms-Icon--cart</span></li>
+          <li><i class="ms-Icon ms-Icon--check"></i><span class="ms-font-m">.ms-Icon--check</span></li>
+          <li><i class="ms-Icon ms-Icon--chevronDown"></i><span class="ms-font-m">.ms-Icon--chevronDown</span></li>
+          <li><i class="ms-Icon ms-Icon--chevronLeft"></i><span class="ms-font-m">.ms-Icon--chevronLeft</span></li>
+          <li><i class="ms-Icon ms-Icon--chevronRight"></i><span class="ms-font-m">.ms-Icon--chevronRight</span></li>
+          <li><i class="ms-Icon ms-Icon--chevronsDown"></i><span class="ms-font-m">.ms-Icon--chevronsDown</span></li>
+          <li><i class="ms-Icon ms-Icon--chevronsLeft"></i><span class="ms-font-m">.ms-Icon--chevronsLeft</span></li>
+          <li><i class="ms-Icon ms-Icon--chevronsRight"></i><span class="ms-font-m">.ms-Icon--chevronsRight</span></li>
+          <li><i class="ms-Icon ms-Icon--coffee"></i><span class="ms-font-m">.ms-Icon--coffee</span></li>
+          <li><i class="ms-Icon ms-Icon--directions"></i><span class="ms-font-m">.ms-Icon--directions</span></li>
+          <li><i class="ms-Icon ms-Icon--documentForward"></i><span class="ms-font-m">.ms-Icon--documentForward</span></li>
+          <li><i class="ms-Icon ms-Icon--documentReply"></i><span class="ms-font-m">.ms-Icon--documentReply</span></li>
+          <li><i class="ms-Icon ms-Icon--documents"></i><span class="ms-font-m">.ms-Icon--documents</span></li>
+          <li><i class="ms-Icon ms-Icon--documentSearch"></i><span class="ms-font-m">.ms-Icon--documentSearch</span></li>
+          <li><i class="ms-Icon ms-Icon--dogAlt"></i><span class="ms-font-m">.ms-Icon--dogAlt</span></li>
+          <li><i class="ms-Icon ms-Icon--dropdown"></i><span class="ms-font-m">.ms-Icon--dropdown</span></li>
+          <li><i class="ms-Icon ms-Icon--ellipsis"></i><span class="ms-font-m">.ms-Icon--ellipsis</span></li>
+          <li><i class="ms-Icon ms-Icon--eventCancel"></i><span class="ms-font-m">.ms-Icon--eventCancel</span></li>
+          <li><i class="ms-Icon ms-Icon--eye"></i><span class="ms-font-m">.ms-Icon--eye</span></li>
+          <li><i class="ms-Icon ms-Icon--favorites"></i><span class="ms-font-m">.ms-Icon--favorites</span></li>
+          <li><i class="ms-Icon ms-Icon--fax"></i><span class="ms-font-m">.ms-Icon--fax</span></li>
+          <li><i class="ms-Icon ms-Icon--fieldNumber"></i><span class="ms-font-m">.ms-Icon--fieldNumber</span></li>
+          <li><i class="ms-Icon ms-Icon--fieldText"></i><span class="ms-font-m">.ms-Icon--fieldText</span></li>
+          <li><i class="ms-Icon ms-Icon--filter"></i><span class="ms-font-m">.ms-Icon--filter</span></li>
+          <li><i class="ms-Icon ms-Icon--flag"></i><span class="ms-font-m">.ms-Icon--flag</span></li>
+          <li><i class="ms-Icon ms-Icon--gear"></i><span class="ms-font-m">.ms-Icon--gear</span></li>
+          <li><i class="ms-Icon ms-Icon--group"></i><span class="ms-font-m">.ms-Icon--group</span></li>
+          <li><i class="ms-Icon ms-Icon--header"></i><span class="ms-font-m">.ms-Icon--header</span></li>
+          <li><i class="ms-Icon ms-Icon--heart"></i><span class="ms-font-m">.ms-Icon--heart</span></li>
+          <li><i class="ms-Icon ms-Icon--heartEmpty"></i><span class="ms-font-m">.ms-Icon--heartEmpty</span></li>
+          <li><i class="ms-Icon ms-Icon--hide"></i><span class="ms-font-m">.ms-Icon--hide</span></li>
+          <li><i class="ms-Icon ms-Icon--home"></i><span class="ms-font-m">.ms-Icon--home</span></li>
+          <li><i class="ms-Icon ms-Icon--key"></i><span class="ms-font-m">.ms-Icon--key</span></li>
+          <li><i class="ms-Icon ms-Icon--lightning"></i><span class="ms-font-m">.ms-Icon--lightning</span></li>
+          <li><i class="ms-Icon ms-Icon--link"></i><span class="ms-font-m">.ms-Icon--link</span></li>
+          <li><i class="ms-Icon ms-Icon--listBullets"></i><span class="ms-font-m">.ms-Icon--listBullets</span></li>
+          <li><i class="ms-Icon ms-Icon--mailEdit"></i><span class="ms-font-m">.ms-Icon--mailEdit</span></li>
+          <li><i class="ms-Icon ms-Icon--mailOpen"></i><span class="ms-font-m">.ms-Icon--mailOpen</span></li>
+          <li><i class="ms-Icon ms-Icon--mailSend"></i><span class="ms-font-m">.ms-Icon--mailSend</span></li>
+          <li><i class="ms-Icon ms-Icon--mailSync"></i><span class="ms-font-m">.ms-Icon--mailSync</span></li>
+          <li><i class="ms-Icon ms-Icon--mapMarker"></i><span class="ms-font-m">.ms-Icon--mapMarker</span></li>
+          <li><i class="ms-Icon ms-Icon--merge"></i><span class="ms-font-m">.ms-Icon--merge</span></li>
+          <li><i class="ms-Icon ms-Icon--metadata"></i><span class="ms-font-m">.ms-Icon--metadata</span></li>
+          <li><i class="ms-Icon ms-Icon--microphone"></i><span class="ms-font-m">.ms-Icon--microphone</span></li>
+          <li><i class="ms-Icon ms-Icon--miniatures"></i><span class="ms-font-m">.ms-Icon--miniatures</span></li>
+          <li><i class="ms-Icon ms-Icon--mobile"></i><span class="ms-font-m">.ms-Icon--mobile</span></li>
+          <li><i class="ms-Icon ms-Icon--money"></i><span class="ms-font-m">.ms-Icon--money</span></li>
+          <li><i class="ms-Icon ms-Icon--music"></i><span class="ms-font-m">.ms-Icon--music</span></li>
+          <li><i class="ms-Icon ms-Icon--newsfeed"></i><span class="ms-font-m">.ms-Icon--newsfeed</span></li>
+          <li><i class="ms-Icon ms-Icon--note"></i><span class="ms-font-m">.ms-Icon--note</span></li>
+          <li><i class="ms-Icon ms-Icon--notebook"></i><span class="ms-font-m">.ms-Icon--notebook</span></li>
+          <li><i class="ms-Icon ms-Icon--noteEdit"></i><span class="ms-font-m">.ms-Icon--noteEdit</span></li>
+          <li><i class="ms-Icon ms-Icon--noteForward"></i><span class="ms-font-m">.ms-Icon--noteForward</span></li>
+          <li><i class="ms-Icon ms-Icon--noteReply"></i><span class="ms-font-m">.ms-Icon--noteReply</span></li>
+          <li><i class="ms-Icon ms-Icon--onlineAdd"></i><span class="ms-font-m">.ms-Icon--onlineAdd</span></li>
+          <li><i class="ms-Icon ms-Icon--oofReply"></i><span class="ms-font-m">.ms-Icon--oofReply</span></li>
+          <li><i class="ms-Icon ms-Icon--panel"></i><span class="ms-font-m">.ms-Icon--panel</span></li>
+          <li><i class="ms-Icon ms-Icon--partner"></i><span class="ms-font-m">.ms-Icon--partner</span></li>
+          <li><i class="ms-Icon ms-Icon--pencil"></i><span class="ms-font-m">.ms-Icon--pencil</span></li>
+          <li><i class="ms-Icon ms-Icon--people"></i><span class="ms-font-m">.ms-Icon--people</span></li>
+          <li><i class="ms-Icon ms-Icon--peopleAdd"></i><span class="ms-font-m">.ms-Icon--peopleAdd</span></li>
+          <li><i class="ms-Icon ms-Icon--peopleCheck"></i><span class="ms-font-m">.ms-Icon--peopleCheck</span></li>
+          <li><i class="ms-Icon ms-Icon--peopleError"></i><span class="ms-font-m">.ms-Icon--peopleError</span></li>
+          <li><i class="ms-Icon ms-Icon--peoplePause"></i><span class="ms-font-m">.ms-Icon--peoplePause</span></li>
+          <li><i class="ms-Icon ms-Icon--peopleRemove"></i><span class="ms-font-m">.ms-Icon--peopleRemove</span></li>
+          <li><i class="ms-Icon ms-Icon--peopleSync"></i><span class="ms-font-m">.ms-Icon--peopleSync</span></li>
+          <li><i class="ms-Icon ms-Icon--person"></i><span class="ms-font-m">.ms-Icon--person</span></li>
+          <li><i class="ms-Icon ms-Icon--personAdd"></i><span class="ms-font-m">.ms-Icon--personAdd</span></li>
+          <li><i class="ms-Icon ms-Icon--personRemove"></i><span class="ms-font-m">.ms-Icon--personRemove</span></li>
+          <li><i class="ms-Icon ms-Icon--phone"></i><span class="ms-font-m">.ms-Icon--phone</span></li>
+          <li><i class="ms-Icon ms-Icon--pictureAdd"></i><span class="ms-font-m">.ms-Icon--pictureAdd</span></li>
+          <li><i class="ms-Icon ms-Icon--pictureRemove"></i><span class="ms-font-m">.ms-Icon--pictureRemove</span></li>
+          <li><i class="ms-Icon ms-Icon--pinDown"></i><span class="ms-font-m">.ms-Icon--pinDown</span></li>
+          <li><i class="ms-Icon ms-Icon--pinLeft"></i><span class="ms-font-m">.ms-Icon--pinLeft</span></li>
+          <li><i class="ms-Icon ms-Icon--plane"></i><span class="ms-font-m">.ms-Icon--plane</span></li>
+          <li><i class="ms-Icon ms-Icon--popout"></i><span class="ms-font-m">.ms-Icon--popout</span></li>
+          <li><i class="ms-Icon ms-Icon--post"></i><span class="ms-font-m">.ms-Icon--post</span></li>
+          <li><i class="ms-Icon ms-Icon--quote"></i><span class="ms-font-m">.ms-Icon--quote</span></li>
+          <li><i class="ms-Icon ms-Icon--reactivate"></i><span class="ms-font-m">.ms-Icon--reactivate</span></li>
+          <li><i class="ms-Icon ms-Icon--receiptCheck"></i><span class="ms-font-m">.ms-Icon--receiptCheck</span></li>
+          <li><i class="ms-Icon ms-Icon--receiptForward"></i><span class="ms-font-m">.ms-Icon--receiptForward</span></li>
+          <li><i class="ms-Icon ms-Icon--receiptReply"></i><span class="ms-font-m">.ms-Icon--receiptReply</span></li>
+          <li><i class="ms-Icon ms-Icon--replyAllAlt"></i><span class="ms-font-m">.ms-Icon--replyAllAlt</span></li>
+          <li><i class="ms-Icon ms-Icon--scheduling"></i><span class="ms-font-m">.ms-Icon--scheduling</span></li>
+          <li><i class="ms-Icon ms-Icon--socialListening"></i><span class="ms-font-m">.ms-Icon--socialListening</span></li>
+          <li><i class="ms-Icon ms-Icon--sort"></i><span class="ms-font-m">.ms-Icon--sort</span></li>
+          <li><i class="ms-Icon ms-Icon--split"></i><span class="ms-font-m">.ms-Icon--split</span></li>
+          <li><i class="ms-Icon ms-Icon--star"></i><span class="ms-font-m">.ms-Icon--star</span></li>
+          <li><i class="ms-Icon ms-Icon--starEmpty"></i><span class="ms-font-m">.ms-Icon--starEmpty</span></li>
+          <li><i class="ms-Icon ms-Icon--stopwatch"></i><span class="ms-font-m">.ms-Icon--stopwatch</span></li>
+          <li><i class="ms-Icon ms-Icon--story"></i><span class="ms-font-m">.ms-Icon--story</span></li>
+          <li><i class="ms-Icon ms-Icon--styleRemove"></i><span class="ms-font-m">.ms-Icon--styleRemove</span></li>
+          <li><i class="ms-Icon ms-Icon--taskRecurring"></i><span class="ms-font-m">.ms-Icon--taskRecurring</span></li>
+          <li><i class="ms-Icon ms-Icon--text"></i><span class="ms-font-m">.ms-Icon--text</span></li>
+          <li><i class="ms-Icon ms-Icon--tile"></i><span class="ms-font-m">.ms-Icon--tile</span></li>
+          <li><i class="ms-Icon ms-Icon--today"></i><span class="ms-font-m">.ms-Icon--today</span></li>
+          <li><i class="ms-Icon ms-Icon--underline"></i><span class="ms-font-m">.ms-Icon--underline</span></li>
+          <li><i class="ms-Icon ms-Icon--video"></i><span class="ms-font-m">.ms-Icon--video</span></li>
+          <li><i class="ms-Icon ms-Icon--voicemail"></i><span class="ms-font-m">.ms-Icon--voicemail</span></li>
+          <li><i class="ms-Icon ms-Icon--voicemailForward"></i><span class="ms-font-m">.ms-Icon--voicemailForward</span></li>
+          <li><i class="ms-Icon ms-Icon--voicemailReply"></i><span class="ms-font-m">.ms-Icon--voicemailReply</span></li>
+        </ul>
+      </div>
+      
+    </article>
+  </div>
+
+  <!-- footer -->
+  <footer id="page-footer" class="ms-Grid-row ms-Grid-col ms-u-sm12 ms-font-m ms-fontWeight-light ms-fontColor-white">
+    <p>Microsoft, Office, Office 365 and SharePoint are registered trademarks of Microsoft Corporation.</p>
+    <p>Current Version of the Office UI Fabric used on this site: v1.0.0</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

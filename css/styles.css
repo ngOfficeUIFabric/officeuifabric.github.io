@@ -84,6 +84,13 @@ nav {
   border-bottom: none;
 }
 
+/* table utils */
+.align-middle {
+  vertical-align:middle;
+}
+.no-wrap-cell {
+  white-space: nowrap;
+}
 
 /* icon page tweaks */
 .icon-list ul li {
@@ -100,4 +107,31 @@ nav {
   font-size:35px;
   display:block;
   margin:10px auto;
+}
+
+/* animation page tweaks */
+.animation-container {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+.animation-content {
+  height: 100%;
+  border: 1px solid gray;
+  padding: 10px;
+}
+.animation-panel-in {
+  position: absolute;
+  top: 0px;
+  width: 60px;
+  height: 100%;
+  opacity: 0;
+}
+.animation-panel-out {
+  position: absolute;
+  top: 0px;
+  width: 60px;
+  height: 100%;
+  opacity: 1;
 }

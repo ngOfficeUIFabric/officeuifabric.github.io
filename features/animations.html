@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>Office UI Fabric - Features - Animations</title>
+  <meta charset="UTF-8">
+  <!-- fav icons -->
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+
+  <!-- azure application insights -->
+  <script src="/js/azure-app-insights.js" type="text/javascript"></script>
+  
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  
+  <!-- animation utils -->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    function triggerAnimation(element, panelId){
+      var panel = jQuery('#animatepanel-'+ panelId);
+
+      // add animation
+      var cssClass = 'ms-u-' + panelId;
+      panel.addClass(cssClass);
+
+      // set timeout to remove the class on 1.5s
+      setTimeout(function(){
+        panel.removeClass(cssClass)
+      }, 1500);
+
+      // disable events
+      event.preventDefault();
+    }
+  </script>
+  <style>
+    .ms-Table-row:hover {
+      background-color:white;
+      cursor: pointer;
+      outline: 1px solid transparent;
+    }
+  </style>
+</head>
+
+<body>
+<div class="ms-Grid">
+  <!-- header -->
+  <header id="page-header" class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <div id="brand-logo">
+      <img src="/img/logo_fabric_glyph.svg" alt="Office Fabric UI" height="88" />
+    </div>
+    <div id="brand-name">
+      <img src="/img/logo_fabric_text.svg" alt="Office Fabric UI" width="137" />
+    </div>
+    <div id="site-tagline" class="ms-font-l ms-fontColor-white ms-fontWeight-light">
+      Demos of the front-end framework for building experiences using Office, Office 365 &amp; SharePoint.
+    </div>
+  </header>
+
+  <!-- navigation -->
+  <nav class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <ul id="global-nav">
+      <li class="ms-font-l ms-fontWeight-light"><a href="/">Home</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/features">Features</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/components">Components</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/resources.html">Resources</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/status.html">Status</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/contribute.html">Contribute!</a></li>
+    </ul>
+  </nav>
+
+  <div class="ms-Grid-row">
+    <!-- side-nav -->
+    <aside id="local-nav" class="ms-Grid-col ms-u-sm-3 ">
+      <ul>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Top">Animations</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Usage">Usage</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Demos">Demos</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#SlideInDemos">Slide In Demos</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#SlideOutDemos">Slide Out Demos</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#ZoomDemos">Zoom / Scale Demos</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#FadeInDemos">Fade In Demos</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#FadeOutDemos">Fade Out Demos</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Panels">Panel Animation Guidance</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Dialogs">Dialog Animation Guidance</a></li>
+      </ul>
+    </aside>
+  
+    <!-- page body -->
+    <article id="page-main" class="ms-Grid-col ms-u-sm9 ms-font-m">
+      <a name="Top"></a>
+      <p class="ms-font-su">Features <i class="ms-Icon ms-Icon--caretRight" aria-hidden="true"></i> Animations</p>
+      <p class="ms-font-l">The Office UI Fabric includes common animations that you will find used across Office 365, Office clients & SharePoint. These animations are provided as CSS classes that you can use within your own applications.</p>
+      <p class="ms-font-l">The animations vary in three different axis:</p>
+      
+      <ul>
+        <li><span class="ms-font-l ms-fontWeight-semibold">Direction</span>: Aside from the common up / down / right / left direction options, animations can also move related to the origin and completion of tasks or occurance of events.</li>
+        <li><span class="ms-font-l ms-fontWeight-semibold">Orientation</span>: How does the animation behave? Animations in the Office UI Fabric can slide in/out , scale or fade in/out, or zoom in/out.</li>
+        <li><span class="ms-font-l ms-fontWeight-semibold">Speed / Duration</span>: How long does it take for the animation to complete. The speed of an animation conveys the importance or urgency of the action or subject of the animation.</li>
+      </ul>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="Usage"></a>
+      <p class="ms-font-xxl">Usage</p>
+      <p class="ms-font-l">Using any of the animations provided is straightforward:</p>
+      <ul>
+        <li class="ms-font-l">Create an element that you want to animate and position it in the final position.</li>
+        <li class="ms-font-l">If the element is going from not visiable to visable, such as fading in, set it's opacity to zero. The animation will handle the trasition to 1.</li>
+        <li class="ms-font-l">Conversely, if the element is going from visiable to not visable, such as fading out, set it's opacity to 1. The animation will handle the trasition to 0.</li>
+        <li class="ms-font-l">To apply the animation, when the desired event occurs that should trigger the animation, add an animation class to the element.</li>
+        <li class="ms-font-l">After adding the animation, it's a good idea to set a timeout to remove the animation after it completes (500ms or 1s works for this) by removing the class you added.</li>
+      </ul>
+      <p class="ms-font-l">Below you will find examples of all the animations in the Office UI Fabric. Let's look at a simple example first. Jump down to the HTML part of the sample. What you will see is a <span class="ms-fontWeight-semibold">div</span> that contains two other <span class="ms-fontWeight-semibold">div</span> elements. The outer one is the container for the object (<code>.animation-content</code>) and the animated object (<code>.animate-panel</code>).</p>
+      <p class="ms-font-l">When the <code>.animation-content</code> is clicked, the script adds the animation class <code>.ms-u.slideRightIn40</code> to the <code>.animation-panel</code> and sets a 1 second timeout to remove the class which happens well after the completion of the animation.</p>
+      <p class="ms-font-l">View this same code in an <a href="http://plnkr.co/edit/7cj8HGAYQ7MpX6bNypD7?p=preview" target="_blank">executable Plunk</a>.</p>
+        
+      <script src="https://gist.github.com/andrewconnell/5ab3e05cb309237be2cf.js"></script>
+        
+      <a name="Demos"></a>
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+      
+      <a name="Demos"></a>
+      <p class="ms-font-xxl">Animation Demos</p>
+      <p class="ms-font-l">View the details on each of the animations below. To see an example of the demo, click the box in the right-most column in each row.</a>
+      
+      <a name="SlideInDemos"></a>
+      <p class="ms-font-xl">Slide In Animations</p>
+      <div class="ms-Table">
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">CSS Class</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Description</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Cubic Bezier</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Timing</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Example</div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideRightIn40</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide right 40px &amp; fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.9, 0.2, 1</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideRightIn40');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideRightIn40" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideLefttIn40</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide left 40px &amp; fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.9, 0.2, 1</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideLeftIn40');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideLeftIn40" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideUpIn20</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide up 20px &amp; fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.9, 0.2, 1</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideUpIn20');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideUpIn20" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideUpIn10</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide up 10px &amp; fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">167ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideUpIn10');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideUpIn10" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideDownIn20</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide down 20px &amp; fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.9, 0.2, 1</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideDownIn20');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideDownIn20" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideDownIn10</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide down 10px &amp; fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">167ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideDownIn10');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideDownIn10" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="SlideOutDemos"></a>
+      <p class="ms-font-xl">Slide Out Animations</p>
+      <div class="ms-Table">
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">CSS Class</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Description</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Cubic Bezier</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Timing</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Example</div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideRightOut40</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide right 40px &amp; fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.9, 0.2, 1</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideRightOut40');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideRightOut40" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideLeftOut40</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide left 40px &amp; fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.9, 0.2, 1</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideLeftOut40');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideLeftOut40" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideUpOut20</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide up 20px &amp; fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.9, 0.2, 1</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideUpOut20');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideUpOut20" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideUpOut10</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide up 10px &amp; fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">167ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideUpOut10');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideUpOut10" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideDownOut20</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide down 20px &amp; fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.9, 0.2, 1</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideDownOut20');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideDownOut20" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-slideDownOut10</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Slide down 10px &amp; fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">167ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'slideDownOut10');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-slideDownOut10" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="ZoomDemos"></a>
+      <p class="ms-font-xl">Zoom / Scale Animations</p>
+      <div class="ms-Table">
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">CSS Class</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Description</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Cubic Bezier</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Timing</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Example</div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-scaleUpIn100</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Scale / zoom up to 100% &amp; fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.9, 0.2, 1</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'scaleUpIn100');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-scaleUpIn100" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-scaleDownIn100</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Scale / zoom down to 100% &amp; fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.9, 0.2, 1</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'scaleDownIn100');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-scaleDownIn100" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-scaleUpOut103</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Scale / zoom up to 103% &amp; fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">167ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'scaleUpOut103');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-scaleUpOut103" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-scaleDownOut98</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Scale / zoom down to 98% &amp; fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">167ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'scaleDownOut98');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-scaleDownOut98" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="FadeInDemos"></a>
+      <p class="ms-font-xl">Fade In Animations</p>
+      <div class="ms-Table">
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">CSS Class</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Description</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Cubic Bezier</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Timing</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Example</div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-fadeIn100</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">167ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'fadeIn100');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-fadeIn100" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-fadeIn200</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">267ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'fadeIn200');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-fadeIn200" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-fadeIn400</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'fadeIn400');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-fadeIn400" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-fadeIn500</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Fade in</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">467ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'fadeIn500');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-fadeIn500" class="animation-panel-in ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="FadeOutDemos"></a>
+      <p class="ms-font-xl">Fade Out Animations</p>
+      <div class="ms-Table">
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">CSS Class</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Description</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Cubic Bezier</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Timing</div>
+          <div class="ms-Table-cell ms-font-l ms-fontWeight-semibold no-wrap-cell">Example</div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-fadeOut100</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">167ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'fadeOut100');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-fadeOut100" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-fadeOut200</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">267ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'fadeOut200');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-fadeOut200" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-fadeOut400</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">367ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'fadeOut400');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-fadeOut400" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ms-Table-row">
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">.ms-u-fadeOut500</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">Fade out</div>
+          <div class="ms-Table-cell ms-font-l no-wrap-cell align-middle">0.1, 0.25, 0.75, 0.9</div>
+          <div class="ms-Table-cell ms-font-l align-middle">467ms</div>
+          <div class="ms-Table-cell ms-font-l" style="min-width:120px">
+            <div class="animation-container">
+              <div class="animation-content" onclick="triggerAnimation(this, 'fadeOut500');"><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /></div>
+              <div id="animatepanel-fadeOut500" class="animation-panel-out ms-bgColor-themePrimary"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+      
+      <a name="Panels"></a>
+      <p class="ms-font-xxl">Panel Animation Guidance</p>
+      <p class="ms-font-l">Microsoft offers the <a href="https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#animations">following guidance</a> when applying animations to panels:</p>
+      <blockquote class="ms-font-l ms-fontWeight-light">When choosing a motion for side panels, consider the origin of the triggering element. Use the motion to create a link between the action and the resulting UI. For example, if the triggering element is on the right side of the interface, consider having the panel move in from the right.</blockquote>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+      
+      <a name="Dialogs"></a>
+      <p class="ms-font-xxl">Dialogs Animation Guidance</p>
+      <p class="ms-font-l">Microsoft offers the <a href="https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#animations">following guidance</a> when applying animations to dialogs:</p>
+      <blockquote class="ms-font-l ms-fontWeight-light">When choosing a motion for dialogs, consider the origin and tone of the content. For a warning or error dialog, a quick fade in might be appropriate. If the dialog appears when a user chooses an item to get more information, a scale-up might be appropriate.</blockquote>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+    </article>
+  </div>
+
+  <!-- footer -->
+  <footer id="page-footer" class="ms-Grid-row ms-Grid-col ms-u-sm12 ms-font-m ms-fontWeight-light ms-fontColor-white">
+    <p>Microsoft, Office, Office 365 and SharePoint are registered trademarks of Microsoft Corporation.</p>
+    <p>Current Version of the Office UI Fabric used on this site: v1.0.0</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

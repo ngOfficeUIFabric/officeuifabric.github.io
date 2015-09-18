@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>Office UI Fabric - Features</title>
+  <meta charset="UTF-8">
+  <!-- fav icons -->
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+
+  <!-- azure application insights -->
+  <script src="/js/azure-app-insights.js" type="text/javascript"></script>
+  
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+<div class="ms-Grid">
+  <!-- header -->
+  <header id="page-header" class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <div id="brand-logo">
+      <img src="/img/logo_fabric_glyph.svg" alt="Office Fabric UI" height="88" />
+    </div>
+    <div id="brand-name">
+      <img src="/img/logo_fabric_text.svg" alt="Office Fabric UI" width="137" />
+    </div>
+    <div id="site-tagline" class="ms-font-l ms-fontColor-white ms-fontWeight-light">
+      Demos of the front-end framework for building experiences using Office, Office 365 &amp; SharePoint.
+    </div>
+  </header>
+
+  <!-- navigation -->
+  <nav class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <ul id="global-nav">
+      <li class="ms-font-l ms-fontWeight-light"><a href="/">Home</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/features">Features</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/components">Components</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/resources.html">Resources</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/status.html">Status</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/contribute.html">Contribute!</a></li>
+    </ul>
+  </nav>
+
+  <div class="ms-Grid-row">
+    <!-- side-nav -->
+    <aside id="local-nav" class="ms-Grid-col ms-u-sm-3 ">
+      <ul>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Top">Localization</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#rtlSupport">Right-to-Left Support</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#LanguageOptimizedFonts">Language-Optimized Fonts</a></li>
+      </ul>
+    </aside>
+  
+    <!-- page body -->
+    <article id="page-main" class="ms-Grid-col ms-u-sm9 ms-font-m">
+      <a name="Top"></a>
+      <p class="ms-font-su">Features <i class="ms-Icon ms-Icon--caretRight" aria-hidden="true"></i> Localization</p>
+      <p class="ms-font-l">The Office UI Fabric includes lots of support for localization such as right-to-left support and language-optmized fonts.</p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="rtlSupport"></a>
+      <p class="ms-font-xxl">Right-to-Left Support</p>
+      <p class="ms-font-l">The Office UI Fabric inclides an alternate CSS file to be included in pages that are written in right-to-left (RTL) languages. The CSS file changes the direction of the columns the responsive grid.</p>
+      <p class="ms-font-l">To apply the RTL version of the Office UI Fabric, add the <span class="ms-fontWeight-semibold">dir</span> attribute to the HTML tag and the RTL version of the CSS file Office UI Fabric uses.</p>
+      
+      <script src="https://gist.github.com/andrewconnell/44e8ab2a18fd4a22ca82.js"></script>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="LanguageOptimizedFonts"></a>
+      <p class="ms-font-xxl">Language-Optimized Fonts</p>
+      <p class="ms-font-l">The Western European character set of Segoe UI is used by default by the Office UI Fabric. Languages with other characters will get a version of Segoe UI with a different character set or use a system font.</p>
+      <p class="ms-font-l">The HTML <span class="ms-fontWeight-semibold">lang</span> attribute specifies the language of the element's content. This is typically applied to the root HTML element, where it will be inherited by the entire page as the following example:</p>
+
+      <code>&lt;html lang=&quot;th-TH&quot;&gt;...&lt;/html&gt;</code>
+      
+      <p class="ms-font-l">Pages that use multiple languages can utilize the <span class="ms-fontWeight-semibold">lang</span> attribute on individual elements as the following example shows:</p>
+
+      <script src="https://gist.github.com/andrewconnell/a1ce7d2cdd9b2be54473.js"></script>
+
+      <p class="ms-font-l">The Office UI Fabric supports 24 language codes. These codes use the font stacks list in the following table:</p>
+
+      <div class="ms-Table ms-bgColor-neutralLight">
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l ms-fontWeight-semibold">Language</span>
+          <span class="ms-Table-cell ms-font-l ms-fontWeight-semibold">Code</span>
+          <span class="ms-Table-cell ms-font-l ms-fontWeight-semibold">Font List</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Western European (default)</span>
+          <span class="ms-Table-cell ms-font-l">N/A</span>     
+          <span class="ms-Table-cell ms-font-l">Segoe UI Web Regular, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Arabic</span>
+          <span class="ms-Table-cell ms-font-l">ar</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular Arabic, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Bulgarian</span>                
+          <span class="ms-Table-cell ms-font-l">bg-BG</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular Cyrillic, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Chinese (simplified)</span>
+          <span class="ms-Table-cell ms-font-l">ch-ZHS</span>
+          <span class="ms-Table-cell ms-font-l">Microsoft Yahei, Verdana, Simsun, Segoe UI, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Chinese (traditional)</span>     
+          <span class="ms-Table-cell ms-font-l">ch-ZHT</span>  
+          <span class="ms-Table-cell ms-font-l">Microsoft Jhenghei, Pmingliu, Segoe UI, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Croatian</span>                  
+          <span class="ms-Table-cell ms-font-l">hr-HR</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Czech</span>                     
+          <span class="ms-Table-cell ms-font-l">cs-CZ</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Estonian</span>                  
+          <span class="ms-Table-cell ms-font-l">et-EE</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Greek</span>                     
+          <span class="ms-Table-cell ms-font-l">el-GR</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular Greek' Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Hebrew</span>                    
+          <span class="ms-Table-cell ms-font-l">he-IL</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular Hebrew, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Hindi</span>                     
+          <span class="ms-Table-cell ms-font-l">hi-IN</span>   
+          <span class="ms-Table-cell ms-font-l">Nirmala UI, Segoe UI, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Hungarian</span>                 
+          <span class="ms-Table-cell ms-font-l">hu-HU</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Japanese</span>                 
+          <span class="ms-Table-cell ms-font-l">ja-JP</span>   
+          <span class="ms-Table-cell ms-font-l">YuGothic, Meiryo UI, Meiryo, MS Pgothic, Osaka, Segoe UI, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Kazakh</span>                    
+          <span class="ms-Table-cell ms-font-l">kk-KZ</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Korean</span>                    
+          <span class="ms-Table-cell ms-font-l">ko-KR</span>   
+          <span class="ms-Table-cell ms-font-l">"Malgun Gothic, Gulim, Segoe UI, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Latvian (Lettish)</span>         
+          <span class="ms-Table-cell ms-font-l">lv-LV</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Lithuanian</span>                
+          <span class="ms-Table-cell ms-font-l">lt-LT</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Polish</span>                    
+          <span class="ms-Table-cell ms-font-l">pl-PL</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Russian</span>                   
+          <span class="ms-Table-cell ms-font-l">ru-RU</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular Cyrillic, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Serbian</span>                   
+          <span class="ms-Table-cell ms-font-l">lt-sr-SP</span>
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Slovak</span>                    
+          <span class="ms-Table-cell ms-font-l">sk-SK</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Thai</span>                      
+          <span class="ms-Table-cell ms-font-l">th-TH</span>   
+          <span class="ms-Table-cell ms-font-l">Leelawadee UI Regular, Kmer UI, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Turkish</span>                   
+          <span class="ms-Table-cell ms-font-l">tr-TR</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular East European, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Ukrainian</span>                 
+          <span class="ms-Table-cell ms-font-l">uk-UA</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular Cyrillic, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+        <div class="ms-Table-row">
+          <span class="ms-Table-cell ms-font-l">Vietnamese</span>                
+          <span class="ms-Table-cell ms-font-l">vi-VN</span>   
+          <span class="ms-Table-cell ms-font-l">Segoe UI Regular Vietnamese, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif</span>
+        </div>
+      </div>
+
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+    </article>
+  </div>
+
+  <!-- footer -->
+  <footer id="page-footer" class="ms-Grid-row ms-Grid-col ms-u-sm12 ms-font-m ms-fontWeight-light ms-fontColor-white">
+    <p>Microsoft, Office, Office 365 and SharePoint are registered trademarks of Microsoft Corporation.</p>
+    <p>Current Version of the Office UI Fabric used on this site: v1.0.0</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

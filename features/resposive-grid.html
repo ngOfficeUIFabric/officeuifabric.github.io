@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>Office UI Fabric - Features - Responsive Grid</title>
+  <meta charset="UTF-8">
+  <!-- fav icons -->
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+
+  <!-- azure application insights -->
+  <script src="/js/azure-app-insights.js" type="text/javascript"></script>
+  
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  
+  <style type="text/css">
+    .block {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px black solid;
+      text-align: center;
+      color:white;
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+<div class="ms-Grid">
+  <!-- header -->
+  <header id="page-header" class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <div id="brand-logo">
+      <img src="/img/logo_fabric_glyph.svg" alt="Office Fabric UI" height="88" />
+    </div>
+    <div id="brand-name">
+      <img src="/img/logo_fabric_text.svg" alt="Office Fabric UI" width="137" />
+    </div>
+    <div id="site-tagline" class="ms-font-l ms-fontColor-white ms-fontWeight-light">
+      Demos of the front-end framework for building experiences using Office, Office 365 &amp; SharePoint.
+    </div>
+  </header>
+
+  <!-- navigation -->
+  <nav class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <ul id="global-nav">
+      <li class="ms-font-l ms-fontWeight-light"><a href="/">Home</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/features">Features</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/components">Components</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/resources.html">Resources</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/status.html">Status</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/contribute.html">Contribute!</a></li>
+    </ul>
+  </nav>
+
+  <div class="ms-Grid-row">
+    <!-- side-nav -->
+    <aside id="local-nav" class="ms-Grid-col ms-u-sm-3 ">
+      <ul>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Top">Responsive Grid</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Using">Using</a></li>
+      </ul>
+    </aside>
+  
+    <!-- page body -->
+    <article id="page-main" class="ms-Grid-col ms-u-sm9 ms-font-m">
+      <a name="Top"></a>
+      <p class="ms-font-su">Features <i class="ms-Icon ms-Icon--caretRight" aria-hidden="true"></i> Responsive Grid</p>
+      <p class="ms-font-l">Like other popular design libraries, the Office UI Fabric includes a mobile and fluid responsive grid system that is based on the popular 12 column layout. Use any combination of columns with provided CSS classes that add up to 12 columns for a strong layout.</p>
+      <p class="ms-font-l">View these demos as an <a href="http://plnkr.co/edit/g12b1cSZcGGOFuWysCtb?p=preview" target="_blank">executable Plunk</a>.</p>
+      <p class="ms-font-l">Here's an example of a few different layouts you could use with this the system:</p>
+      <div width="100%">
+        <div class="ms-Grid">
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm2 block">2</div>
+            <div class="ms-Grid-col ms-u-sm2 block">2</div>
+            <div class="ms-Grid-col ms-u-sm2 block">2</div>
+            <div class="ms-Grid-col ms-u-sm2 block">2</div>
+            <div class="ms-Grid-col ms-u-sm2 block">2</div>
+            <div class="ms-Grid-col ms-u-sm2 block">2</div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm3 block">3</div>
+            <div class="ms-Grid-col ms-u-sm3 block">3</div>
+            <div class="ms-Grid-col ms-u-sm3 block">3</div>
+            <div class="ms-Grid-col ms-u-sm3 block">3</div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm4 block">4</div>
+            <div class="ms-Grid-col ms-u-sm4 block">4</div>
+            <div class="ms-Grid-col ms-u-sm4 block">4</div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm6 block">6</div>
+            <div class="ms-Grid-col ms-u-sm6 block">6</div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm12 block">12</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="ms-font-l">Of course you don't have to be symetrical or uniform across the grid:</p>
+      <div width="100%">
+        <div class="ms-Grid">
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm2 block">2</div>
+            <div class="ms-Grid-col ms-u-sm2 block">2</div>
+            <div class="ms-Grid-col ms-u-sm2 block">2</div>
+            <div class="ms-Grid-col ms-u-sm6 block">6</div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm3 block">3</div>
+            <div class="ms-Grid-col ms-u-sm3 block">3</div>
+            <div class="ms-Grid-col ms-u-sm6 block">6</div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm6 block">6</div>
+            <div class="ms-Grid-col ms-u-sm3 block">3</div>
+            <div class="ms-Grid-col ms-u-sm3 block">3</div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm9 block">9</div>
+            <div class="ms-Grid-col ms-u-sm3 block">3</div>
+          </div>
+          <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-u-sm1 block">1</div>
+            <div class="ms-Grid-col ms-u-sm11 block">11</div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="Using"></a>
+      <p class="ms-font-xxl">Using</p>
+      <p class="ms-font-l">Let's look at how the grid works. It is all based on a container and then a series of rows and columns:</p>
+      <ul>
+        <li class="ms-font-l">Rows must be placed inside a grid using <code>.ms-Grid</code>.</li>
+        <li class="ms-font-l">Columns are then placed within rows using <code>.ms-Grid-row</code>.</li>
+        <li class="ms-font-l">Nothing else is placed within the rows; only columns should be placed in rows.</li>
+        <li class="ms-font-l">Columns are created using <code>.ms-Grid-col</code> followed by a sizing class.</li>
+        <li class="ms-font-l">Size the columns using classes in the format of <code>.ms-u-sm[#]</code>. For example, the very first row in the first grid above contained 12 <code>&lt;class="ms-Grid-col ms-u-sm1"&gt;</code> elements.</li>
+        <li class="ms-font-l">The small sizing class must be used <code>.ms-u-sm[#]</code>, but the medium and large sizes are optional.</li>
+        <li class="ms-font-l">The column classes must add up to 12 for each row using any combination of sizing classes.</li>
+        <li class="ms-font-l">Optionally add additional sizing classes for bigger screens. These are in the format of <code>.ms-u-md[#]</code> and <code>.ms-u-lg[#]</code>.</li>
+      </ul>
+
+      <p class="ms-font-l">Here's an example of the grid in action. This is the same markup used to implement the above grid:</p>
+      
+      <script src="https://gist.github.com/andrewconnell/b3547405b1086787db18.js"></script>
+      
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+    </article>
+  </div>
+
+  <!-- footer -->
+  <footer id="page-footer" class="ms-Grid-row ms-Grid-col ms-u-sm12 ms-font-m ms-fontWeight-light ms-fontColor-white">
+    <p>Microsoft, Office, Office 365 and SharePoint are registered trademarks of Microsoft Corporation.</p>
+    <p>Current Version of the Office UI Fabric used on this site: v1.0.0</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

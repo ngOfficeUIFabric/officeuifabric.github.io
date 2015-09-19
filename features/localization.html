@@ -24,6 +24,9 @@
   <!-- azure application insights -->
   <script src="/js/azure-app-insights.js" type="text/javascript"></script>
   
+  <!-- codepen script -->
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+  
   <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
   <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
   <link rel="stylesheet" href="/css/styles.css" />
@@ -79,8 +82,18 @@
       <p class="ms-font-l">The Office UI Fabric inclides an alternate CSS file to be included in pages that are written in right-to-left (RTL) languages. The CSS file changes the direction of the columns the responsive grid.</p>
       <p class="ms-font-l">To apply the RTL version of the Office UI Fabric, add the <span class="ms-fontWeight-semibold">dir</span> attribute to the HTML tag and the RTL version of the CSS file Office UI Fabric uses.</p>
       
-      <script src="https://gist.github.com/andrewconnell/44e8ab2a18fd4a22ca82.js"></script>
-
+      <!-- codepen snippet -->
+      <div data-height="200" data-theme-id="19054" data-slug-hash="MayNjE" data-default-tab="html" data-user="andrewconnell" class='codepen'><pre><code>&lt;html dir=&quot;rtl&quot;&gt;
+        &lt;head&gt;
+          &lt;meta charset=&quot;utf-8&quot;&gt;
+          &lt;link rel=&quot;stylesheet&quot; href=&quot;fabric-[version].rtl.min.css&quot;&gt;
+        &lt;/head&gt;
+        ...
+      &lt;/html&gt;</code></pre>
+      <p>See the Pen <a href='http://codepen.io/andrewconnell/pen/MayNjE/'>Office UI Fabric - RTL Support</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      </div>
+      <!-- /codepen snippet -->
+      
       <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
 
       <a name="LanguageOptimizedFonts"></a>
@@ -92,8 +105,15 @@
       
       <p class="ms-font-l">Pages that use multiple languages can utilize the <span class="ms-fontWeight-semibold">lang</span> attribute on individual elements as the following example shows:</p>
 
-      <script src="https://gist.github.com/andrewconnell/a1ce7d2cdd9b2be54473.js"></script>
-
+      <!-- codepen snippet -->
+      <div data-height="150" data-theme-id="19054" data-slug-hash="dYMxpr" data-default-tab="html" data-user="andrewconnell" class='codepen'><pre><code>&lt;html lang=&quot;th-TH&quot;&gt;
+        ...
+        &lt;section lang=&quot;vi-VN&quot;&gt;...&lt;/section&gt;
+      &lt;/html&gt;</code></pre>
+      <p>See the Pen <a href='http://codepen.io/andrewconnell/pen/dYMxpr/'>Office UI Fabric - Language Optimized Fonts</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      </div>
+      <!-- /codepen snippet -->
+      
       <p class="ms-font-l">The Office UI Fabric supports 24 language codes. These codes use the font stacks list in the following table:</p>
 
       <div class="ms-Table ms-bgColor-neutralLight">

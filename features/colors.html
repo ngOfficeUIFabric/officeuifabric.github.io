@@ -24,19 +24,12 @@
   <!-- azure application insights -->
   <script src="/js/azure-app-insights.js" type="text/javascript"></script>
   
+  <!-- codepen script -->
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+  
   <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
   <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
   <link rel="stylesheet" href="/css/styles.css" />
-  
-  <style>
-    .action-box{
-      display:inline-block; 
-      text-align:center; 
-      padding: 20px 20px; 
-      border:solid; 
-      border-width:1px;
-    }
-  </style>
 </head>
 
 <body>
@@ -95,16 +88,18 @@
       <h2 class="ms-font-xxl">Usage</h2>
       <p class="ms-font-l">Using the different colors is as simple as adding a CSS class to an element. Each color is provided as a <span class="ms-fontWeight-semibold">font color</span>, <span class="ms-fontWeight-semibold">background color</span> & <span class="ms-fontWeight-semibold">border color</span>. For instance here's a color swatch for the primary theme which is the hex code <span class="ms-fontWeight-semibold">#0078D7</span>:</p>
 
-      <script src="https://gist.github.com/andrewconnell/69b8cac21c6aeeae2608.js"></script>
-
-      <div style="border:1px gray solid; padding:10px; width:25%">
-        <div class="ms-fontColor-themePrimary">ms-fontColor-themePrimary</div>
-        <div class="ms-bgColor-themePrimary ms-fontColor-white" style="width:90%; margin-top:5px; padding:10px;">ms-bgColor-themePrimary</div>
-        <div class="ms-borderColor-themePrimary ms-fontColor-themePrimary" style="border-width:1px; border-style:solid; width:90%; margin-top:5px; padding:10px;">ms-borderColor-themePrimary</div>
+      <!-- codepen snippet -->
+      <div data-height="300" data-theme-id="19054" data-slug-hash="zvqgvW" data-default-tab="html" data-user="andrewconnell" class='codepen'><pre><code>&lt;div class=&quot;ms-font-su&quot;&gt;Office UI Fabric Primary Theme Color Swatch&lt;/div&gt;
+&lt;div style=&quot;border:1px gray solid; padding:10px; width:75%&quot;&gt;
+  &lt;div class=&quot;ms-fontColor-themePrimary&quot;&gt;ms-fontColor-themePrimary&lt;/div&gt;
+  &lt;div class=&quot;ms-bgColor-themePrimary ms-fontColor-white&quot; style=&quot;width:90%; margin-top:5px; padding:10px;&quot;&gt;ms-bgColor-themePrimary&lt;/div&gt;
+  &lt;div class=&quot;ms-borderColor-themePrimary ms-fontColor-themePrimary&quot; style=&quot;border-width:1px; border-style:solid; width:90%; margin-top:5px; padding:10px;&quot;&gt;ms-borderColor-themePrimary&lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      <p>See the Pen <a href='http://codepen.io/andrewconnell/pen/zvqgvW/'>Office UI Fabric - Primary Color Swatch</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
       </div>
-      
-      <p class="ms-font-l">View this same code in an <a href="http://plnkr.co/edit/gRJVVKkBjD9J6UkAa1QQ?p=preview" target="_blank">executable Plunk</a>.</p>
-      
+      <!-- /codepen snippet -->
+
       <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
 
       <a name="ThemeColors"></a>
@@ -512,38 +507,9 @@
       <h2 class="ms-font-xxl">Action Colors</h2>
       <p class="ms-font-l">The following color swatches list all the action related colors in the Office UI Fabric.</p>
       
-      <div class="ms-Grid">
-        <div class="ms-Grid-row">
-          <div class="ms-Grid-col msu-sm2 action-box ms-font-l ms-fontColor-success ms-borderColor-success ms-bgColor-success">
-            <div class="ms-font-xl ms-fontColor-success ms-fontWeight-semibold" style="margin-bottom:15px;">Success</div>
-            <div>ms-fontColor-success</div>
-            <div>ms-bgColor-success</div>
-            <div>ms-borderColor-success</div>
-          </div>
-          <div class="ms-Grid-col msu-sm1"></div>
-          <div class="ms-Grid-col msu-sm2 action-box ms-font-l ms-fontColor-info ms-borderColor-info ms-bgColor-info">
-            <div class="ms-font-xl ms-fontColor-info ms-fontWeight-semibold" style="margin-bottom:15px;">Info</div>
-            <div>ms-fontColor-info</div>
-            <div>ms-bgColor-info</div>
-            <div>ms-borderColor-info</div>
-          </div>
-          <div class="ms-Grid-col msu-sm1"></div>
-          <div class="ms-Grid-col msu-sm2 action-box ms-font-l ms-fontColor-alert ms-borderColor-alert ms-bgColor-alert">
-            <div class="ms-font-xl ms-fontColor-alert ms-fontWeight-semibold" style="margin-bottom:15px;">Alert</div>
-            <div>ms-fontColor-alert</div>
-            <div>ms-bgColor-alert</div>
-            <div>ms-borderColor-alert</div>
-          </div>
-          <div class="ms-Grid-col msu-sm1"></div>
-          <div class="ms-Grid-col msu-sm2 action-box ms-font-l ms-fontColor-error ms-borderColor-error ms-bgColor-error">
-            <div class="ms-font-xl ms-fontColor-error ms-fontWeight-semibold" style="margin-bottom:15px;">Error</div>
-            <div>ms-fontColor-error</div>
-            <div>ms-bgColor-error</div>
-            <div>ms-borderColor-error</div>
-          </div>
-          <div class="ms-Grid-col msu-sm1"></div>
-        </div>
-      </div>
+      <!-- codepen snippet -->
+      <p data-height="366" data-theme-id="19054" data-slug-hash="NGNQxr" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/NGNQxr/'>Office UI Fabric - Action Themes</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
 
       <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
 

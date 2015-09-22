@@ -25,7 +25,17 @@
   <script src="/js/azure-app-insights.js" type="text/javascript"></script>
   
   <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
+  <link rel="stylesheet" href="/css/styles.min.css" />
+  
+  <script type="text/javascript">
+    function goComponent(target){
+      window.location.href = '/components/'+ target;
+    }
+    function goIssue(target){
+      window.location.href = 'https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/' + target;
+    }
+  </script>
 </head>
 
 <body>
@@ -77,55 +87,175 @@
       <p class="ms-font-xxl">Content</p>
       <div class="ms-Grid">
         <div class="ms-Grid-row">
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/34"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Link</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/31"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> List Item</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/29"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Persona</a></div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('34');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Link</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('31');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">List Item</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('29');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Persona</span>
+            </button>
+          </div>
         </div>
         <div class="ms-Grid-row">
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/30"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Persona Card</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/32"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Spinner</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/33"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Table</a></div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('30');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Persona Card</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('32');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Spinner</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('33');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Table</span>
+            </button>
+          </div>
         </div>
       </div>
       <p class="ms-font-xxl">Inputs</p>
       <div class="ms-Grid">
         <div class="ms-Grid-row">
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/10"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Buttons</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/11"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Choice Fields</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/16"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Date Picker</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/17"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Dropdown</a></div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goComponent('button');">
+              <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--check"></i></span>
+              <span class="ms-Button-label">Buttons</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goComponent('choice-field');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Choice Fields</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('16');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Date Picker</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('17');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Dropdown</span>
+            </button>
+          </div>
         </div>
         <div class="ms-Grid-row">
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/12"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Form Field Label</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/13"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Search Box</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/15"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Text Field</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/14"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Toggle</a></div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('12');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Form Field Label</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('13');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Search Box</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('15');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Text Field</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('14');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Toggle</span>
+            </button>
+          </div>
         </div>
       </div>
 
       <p class="ms-font-xxl">Layout</p>
       <div class="ms-Grid">
         <div class="ms-Grid-row">
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/22"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Callout</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/21"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Dialog</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/19"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> List Item</a></div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('22');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Callout</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('21');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Dialog</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('19');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">List Item</span>
+            </button>
+          </div>
         </div>
         <div class="ms-Grid-row">
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/20"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Org Chart</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/23"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Overlay</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/24"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Panel</a></div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('20');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Org Chart</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('23');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Overlay</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('24');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Panel</span>
+            </button>
+          </div>
         </div>
       </div>
 
       <p class="ms-font-xxl">Navigation</p>
       <div class="ms-Grid">
         <div class="ms-Grid-row">
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/28"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Breadcrumb</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/27"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Contextual Menu</a></div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('28');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Breadcrumb</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('27');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Contextual Menu</span>
+            </button>
+          </div>
         </div>
         <div class="ms-Grid-row">
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/25"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Nav Bar</a></div>
-          <div class="ms-Grid-col ms-u-sm2 ms-font-l"><a href="https://github.com/ngOfficeUIFabric/officeuifabric.github.io/issues/26"><i class="ms-Icon ms-Icon--checkboxEmpty"></i> Pivots</a></div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('25');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Nav Bar</span>
+            </button>
+          </div>
+          <div class="ms-Grid-col ms-u-sm3 ms-font-l">
+            <button class="ms-Button ms-Button--hero" onclick="goIssue('26');">
+              <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
+              <span class="ms-Button-label">Pivots</span>
+            </button>
+          </div>
         </div>
       </div>
 

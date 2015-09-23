@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>Office UI Fabric - Components - Toggle</title>
+  <meta charset="UTF-8">
+  <!-- fav icons -->
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+
+  <!-- azure application insights -->
+  <script src="/js/azure-app-insights.js" type="text/javascript"></script>
+  
+  <!-- codepen -->
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
+  <link rel="stylesheet" href="/css/styles.min.css" />
+</head>
+
+<body>
+<div class="ms-Grid">
+  <!-- header -->
+  <header id="page-header" class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <div id="brand-logo">
+      <img src="/img/logo_fabric_glyph.svg" alt="Office Fabric UI" height="88" />
+    </div>
+    <div id="brand-name">
+      <img src="/img/logo_fabric_text.svg" alt="Office Fabric UI" width="137" />
+    </div>
+    <div id="site-tagline" class="ms-font-l ms-fontColor-white ms-fontWeight-light">
+      Demos of the front-end framework for building experiences using Office, Office 365 &amp; SharePoint.
+    </div>
+  </header>
+
+  <!-- navigation -->
+  <nav class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <ul id="global-nav">
+      <li class="ms-font-l ms-fontWeight-light"><a href="/">Home</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/features">Features</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/components">Components</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/resources.html">Resources</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/status.html">Status</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/contribute.html">Contribute!</a></li>
+    </ul>
+  </nav>
+
+  <div class="ms-Grid-row">
+    <!-- side-nav -->
+    <aside id="local-nav" class="ms-Grid-col ms-u-sm-3 ">
+      <ul>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Top">Toggle</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Usage">Usage</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#TextAbove">Text Above</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#TextBeside">Text Beside</a></li>
+      </ul>
+    </aside>
+    
+  
+  
+    <!-- page body -->
+    <article id="page-main" class="ms-Grid-col ms-u-sm9 ms-font-m">
+      <a name="Top"></a>
+      <p class="ms-font-su">Components <i class="ms-Icon ms-Icon--caretRight" aria-hidden="true"></i> Toggle</p>
+      <p class="ms-font-l">The toggle control is a checkbox control that is rendered like a toggle switch. THe Office UI Fabric provides for the ability to have the text describing the toggle control to be placed above or beside the control.</p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="Usage"></a>
+      <p class="ms-font-xxl">Usage</p>
+      <p class="ms-font-l">Include a reference to the <code>fabric.css</code> and <code>fabric.components.css</code> files, or the corresponding minified version <code>fabric.min.css</code> and <code>fabric.components.min.css</code>. These are available from the public CDN:<br /><code>&lt;link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" /&gt;</code><br /><code>&lt;link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" /&gt;</code></p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="TextAbove"></a>
+      <p class="ms-font-xxl">Text Above</p>
+      <p class="ms-font-l">The toggle control is an <code>&lt;input/&gt;</code> control with a <code>&lt;label/&gt;</code> and a <code>&lt;span/&gt;</code> that describes the control. This is wrapped within a <code>&lt;div/&gt;</code> that is decorated with a <code>.ms-Toggle</code> class. Add the class <code>ms-Toggle--textAbove</code> to have the text appear above the toggle control.</p>
+
+      <!-- codepen snippet -->
+      <p data-height="406" data-theme-id="19054" data-slug-hash="bVwNMe" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/bVwNMe/'>Office UI Fabric - Toggle</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="TextBeside"></a>
+      <p class="ms-font-xxl">Text Beside</p>
+      <p class="ms-font-l">Conversely use the <code>ms-Toggle--textBeside</code> class to place the text beside the control.</p>
+
+      <!-- codepen snippet -->
+      <p data-height="402" data-theme-id="19054" data-slug-hash="bVwNje" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/bVwNje/'>Office UI Fabric - Toggle (Text Beside)</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+      
+    </article>
+  </div>
+
+  <!-- footer -->
+  <footer id="page-footer" class="ms-Grid-row ms-Grid-col ms-u-sm12 ms-font-m ms-fontWeight-light ms-fontColor-white">
+    <p>Microsoft, Office, Office 365 and SharePoint are registered trademarks of Microsoft Corporation.</p>
+    <p>Current Version of the Office UI Fabric used on this site: v1.0.0</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

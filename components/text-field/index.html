@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>Office UI Fabric - Components - Text Field</title>
+  <meta charset="UTF-8">
+  <!-- fav icons -->
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+
+  <!-- azure application insights -->
+  <script src="/js/azure-app-insights.js" type="text/javascript"></script>
+  
+  <!-- codepen -->
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
+  <link rel="stylesheet" href="/css/styles.min.css" />
+</head>
+
+<body>
+<div class="ms-Grid">
+  <!-- header -->
+  <header id="page-header" class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <div id="brand-logo">
+      <img src="/img/logo_fabric_glyph.svg" alt="Office Fabric UI" height="88" />
+    </div>
+    <div id="brand-name">
+      <img src="/img/logo_fabric_text.svg" alt="Office Fabric UI" width="137" />
+    </div>
+    <div id="site-tagline" class="ms-font-l ms-fontColor-white ms-fontWeight-light">
+      Demos of the front-end framework for building experiences using Office, Office 365 &amp; SharePoint.
+    </div>
+  </header>
+
+  <!-- navigation -->
+  <nav class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <ul id="global-nav">
+      <li class="ms-font-l ms-fontWeight-light"><a href="/">Home</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/features">Features</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/components">Components</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/resources.html">Resources</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/status.html">Status</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/contribute.html">Contribute!</a></li>
+    </ul>
+  </nav>
+
+  <div class="ms-Grid-row">
+    <!-- side-nav -->
+    <aside id="local-nav" class="ms-Grid-col ms-u-sm-3 ">
+      <ul>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Top">Text Field</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Usage">Usage</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#StandardTextField">Standard Text Field</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Placeholder">Placeholder</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Underline">Underline</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Multiline">Multiline</a></li>
+      </ul>
+    </aside>
+    
+  
+  
+    <!-- page body -->
+    <article id="page-main" class="ms-Grid-col ms-u-sm9 ms-font-m">
+      <a name="Top"></a>
+      <p class="ms-font-su">Components <i class="ms-Icon ms-Icon--caretRight" aria-hidden="true"></i> Text Field</p>
+      <p class="ms-font-l">The text field control is used to collect free-form input from your users.</p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="Usage"></a>
+      <p class="ms-font-xxl">Usage</p>
+      <p class="ms-font-l">Creating a text field control is as simple as adding the <code>.ms-TextField-field</code> class to an <code>&lt;input&gt;</code> element. You can also wrap it within a <code>&lt;div&gt;</code> and decorate it with the <code>.ms-TextField</code> CSS class to group a label with it.</p>
+      <p class="ms-font-l">Like other controls, include the <code>.is-disabled</code> decorator CSS class to indicate if the field is disabled.</p>
+      <p class="ms-font-l">Include the <code>.is-required</code> decorator CSS class to indicate if the field is required.</p>
+      <p class="ms-font-l">When using placeholders, in addition to adding the CSS classes, you will also want to add JavaScript to clear out the placeholder when the control receives focus as shown in the following snippets. An example of this code, using jQuery, can be found in the Office UI Fabric component distribution: <a href="https://github.com/OfficeDev/Office-UI-Fabric/blob/master/dist/components/TextField/Jquery.TextField.js">Jquery.TextField.js</a></p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="StandardTextField"></a>
+      <p class="ms-font-xxl">Standard Text Field</p>
+
+      <!-- codepen snippet -->
+      <p data-height="300" data-theme-id="19054" data-slug-hash="VvKZvY" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/VvKZvY/'>Office UI Fabric - Text Field (Single Line)</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="Placeholder"></a>
+      <p class="ms-font-xxl">Placeholder</p>
+      <p class="ms-font-l">The Office UI Fabric also includes CSS classes for implementing placeholders in text fields. Adding the <code>.ms-TextField--placeholder</code> to the outter <code>&lt;div&gt;</code> will treat the label as a placeholder.</p>
+      <p class="ms-font-l">Note that this scenario requires the use of some JavaScript to handle the placeholder placement. Refer to the <a href="#Usage">Usage</a> section for more information on this.</p>
+
+      <!-- codepen snippet -->
+      <p data-height="314" data-theme-id="19054" data-slug-hash="EVgYZJ" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/EVgYZJ/'>Office UI Fabric - Text Field (Single Line Placeholder)</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="Underline"></a>
+      <p class="ms-font-xxl">Underline</p>
+      <p class="ms-font-l">The underlined version of the text field moves the label into the first line of the input control.</p>
+      <p class="ms-font-l">Note that this scenario requires the use of some JavaScript to handle the placeholder placement. Refer to the <a href="#Usage">Usage</a> section for more information on this.</p>
+
+      <!-- codepen snippet -->
+      <p data-height="235" data-theme-id="19054" data-slug-hash="qOaBYX" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/qOaBYX/'>Office UI Fabric - Text Field (Underline Placeholder)</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="Multiline"></a>
+      <p class="ms-font-xxl">Multiline</p>
+      <p class="ms-font-l">The text field can also be used as a multiline text entry control. To do this use a <code>&lt;textarea&gt;</code> element instead of an <code>&lt;input&gt;</code> element.</p>
+      
+      <!-- codepen snippet -->
+      <p data-height="338" data-theme-id="19054" data-slug-hash="XmjWYj" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/XmjWYj/'>Office UI Fabric - Text Field (Multiline)</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+      <a name="MultilinePlaceholder">Multiline Placeholder</a>
+      <p class="ms-font-xxl">Multiline Placeholder</p>
+      <p class="ms-font-l">Note that this scenario requires the use of some JavaScript to handle the placeholder placement. Refer to the <a href="#Usage">Usage</a> section for more information on this.</p>
+
+      <!-- codepen snippet -->
+      <p data-height="319" data-theme-id="19054" data-slug-hash="PPGodX" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/PPGodX/'>Office UI Fabric - Text Field (Multiline Placeholder)</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+
+    </article>
+  </div>
+
+  <!-- footer -->
+  <footer id="page-footer" class="ms-Grid-row ms-Grid-col ms-u-sm12 ms-font-m ms-fontWeight-light ms-fontColor-white">
+    <p>Microsoft, Office, Office 365 and SharePoint are registered trademarks of Microsoft Corporation.</p>
+    <p>Current Version of the Office UI Fabric used on this site: v1.0.0</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

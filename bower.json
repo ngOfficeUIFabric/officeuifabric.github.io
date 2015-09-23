@@ -1,0 +1,19 @@
+{
+  "name": "officeuifabric.github.io",
+  "version": "0.3.0",
+  "homepage": "http://officeuifabric.com",
+  "authors": [
+    "Andrew Connell <me@andrewconnell.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Office-UI-Fabric": "git://github.com/OfficeDev/Office-UI-Fabric#1.0.0"
+  }
+}

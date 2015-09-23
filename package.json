@@ -9,6 +9,9 @@
   },
   "license": "MIT",
   "main": "index.html",
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "homepage": "http://officeuifabric.com",
   "repository": {
     "type": "git",

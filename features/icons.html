@@ -25,6 +25,7 @@
   <script src="/js/azure-app-insights.js" type="text/javascript"></script>
   
   <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
   <link rel="stylesheet" href="/css/styles.min.css" />
 </head>
 
@@ -73,39 +74,41 @@
       <h1 class="ms-font-su">Features <i class="ms-Icon ms-Icon--caretRight" aria-hidden="true"></i> Icons</h1>
       <p class="ms-font-l">The Office UI Fabric includes it's own iconography implemented as a custom font. This contains glyphs that can be treated just like other fonts in the sense that you can manipulate the size, color, style and orientation for localization.</p>
 
-      <p class="ms-font-l"><i class="ms-Icon ms-Icon--infoCircle ms-font-xxl ms-fontColor-themePrimary" aria-hidden="true" /></i> Note all fonts in the Office UI Fabric are subject to the terms of the following license: <a href="https://appsforoffice.microsoft.com/fabric/Segoe UI and Fabric CDN License.txt">Segoe UI and Fabric CDN License</a>.
-
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--infoCircle ms-font-xxl ms-fontColor-themePrimary" aria-hidden="true" /></i> Note all fonts in the Office UI Fabric are subject to the terms of the following license: <a href="https://appsforoffice.microsoft.com/fabric/Segoe UI and Fabric CDN License.txt" class="ms-Link">Segoe UI and Fabric CDN License</a>.
+      
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+      
       <a name="Usage"></a>
       <h2 class="ms-font-xxl">Usage</h2>
       <p class="ms-font-l">To use one of the fonts you add a few classes to the HTML element <code>&lt;i /&gt;</code> like so:</p>
       <code>&lt;i class="ms-Icon ms-Icon--group" aria-hidden="true" /&gt;</code>
       <p class="ms-font-l">Will render the following: <i class="ms-Icon ms-Icon--group" aria-hidden="true" /></i></p>
 
-      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
 
       <a name="Accessibility"></a>
       <h2 class="ms-font-xxl">Accessibility</h2>
-      <p class="ms-font-l"><i class="ms-Icon ms-Icon--infoCircle ms-font-xxl ms-fontColor-themePrimary" aria-hidden="true" /></i> Note the presence of the <span class="ms-fontWeight-semibold">aria-hidden</span> attribute. Including this will tell screen readers from reading the icon. <a href="https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md">Microosft's guidance</a> here is as follows:</p>
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--infoCircle ms-font-xxl ms-fontColor-themePrimary" aria-hidden="true" /></i> Note the presence of the <span class="ms-fontWeight-semibold">aria-hidden</span> attribute. Including this will tell screen readers from reading the icon. <a href="https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md" class="ms-Link">Microosft's guidance</a> here is as follows:</p>
       <blockquote class="ms-font-l ms-fontWeight-light">"In cases where meaning is conveyed only through the icon, such as an icon-only navigation bar, be sure to apply an <span class="ms-fontWeight-semibold">aria-hidden</span> to the button for accessibility."</blockquote>
 
-      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
 
       <a name="IconFonts"></a>
       <h2 class="ms-font-xxl">Icon Fonts</h2>
       <p class="ms-font-l">The icons are provided using the following font files:</p>
       <ul>
-        <li><a class="ms-font-l" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.eot">office365icons.eot</a></li>
-        <li><a class="ms-font-l" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.ttf">office365icons.ttf</a></li>
-        <li><a class="ms-font-l" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.woff">office365icons.woff</a></li>
-        <li><a class="ms-font-l" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.svg">office365icons.svg</a></li>
+        <li><a class="ms-font-l ms-Link" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.eot">office365icons.eot</a></li>
+        <li><a class="ms-font-l ms-Link" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.ttf">office365icons.ttf</a></li>
+        <li><a class="ms-font-l ms-Link" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.woff">office365icons.woff</a></li>
+        <li><a class="ms-font-l ms-Link" href="https://appsforoffice.microsoft.com/fabric/fonts/icons/office365icons.svg">office365icons.svg</a></li>
       </ul>
       
-      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top">Back to top</a></p>
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
 
       <a name="IconInventory"></a>
       <h2 class="ms-font-xxl">Icon Inventory</h2>
       <p class="ms-font-l">The following icons are included in the Office UI Fabric base CSS.</p>
-      <p class="ms-font-l">See this code as a Pen <a href='http://codepen.io/andrewconnell/pen/KdzOMW/'>KdzOMW</a> on <a href='http://codepen.io'>CodePen</a>.</p>
+      <p class="ms-font-l">See this code as a Pen <a href='http://codepen.io/andrewconnell/pen/KdzOMW/' class="ms-Link">KdzOMW</a> on <a href='http://codepen.io' class="ms-Link">CodePen</a>.</p>
 
       <div class="icon-list clearfix">
         <ul>
@@ -452,6 +455,8 @@
           <li><i class="ms-Icon ms-Icon--xCircle"></i> <span class="ms-font-m">ms-Icon--xCircle</span></li>
         </ul>
       </div>
+      
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
       
     </article>
   </div>

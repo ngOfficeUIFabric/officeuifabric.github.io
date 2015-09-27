@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>Office UI Fabric - Components - Nav Bar</title>
+  <meta charset="UTF-8">
+  <!-- fav icons -->
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+
+  <!-- azure application insights -->
+  <script src="/js/azure-app-insights.js" type="text/javascript"></script>
+  
+  <!-- codepen -->
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
+  <link rel="stylesheet" href="/css/styles.min.css" />
+</head>
+
+<body>
+<div class="ms-Grid">
+  <!-- header -->
+  <header id="page-header" class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <div id="brand-name" class="ms-font-su ms-fontWeight-semibold ms-fontColor-white">
+      Office Fabric UI
+    </div>
+    <div id="site-tagline" class="ms-font-l ms-fontColor-white ms-fontWeight-light">
+      Demos of the front-end framework for building experiences using Office, Office 365 &amp; SharePoint.
+    </div>
+  </header>
+
+  <!-- navigation -->
+  <nav class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <ul id="global-nav">
+      <li class="ms-font-l ms-fontWeight-light"><a href="/">Home</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/features">Features</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/components">Components</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/resources.html">Resources</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/status.html">Status</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/contribute.html">Contribute!</a></li>
+    </ul>
+  </nav>
+
+  <div class="ms-Grid-row">
+    <!-- side-nav -->
+    <aside id="local-nav" class="ms-Grid-col ms-u-sm-3 ">
+      <ul>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Top">Nav Bar</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Usage">Usage</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Submenu">Submenu Items</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="Search">Search Menu</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Disabled">Disabled Items</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#RightAligned">Right-Aligned Items</a></li>
+
+      </ul>
+    </aside>
+  
+    <!-- page body -->
+    <article id="page-main" class="ms-Grid-col ms-u-sm9 ms-font-m">
+      <a name="Top"></a>
+      <p class="ms-font-su"><a href="/components">Components</a> <i class="ms-Icon ms-Icon--caretRight" aria-hidden="true"></i> Nav Bar</p>
+      <p class="ms-font-l">The Office UI Fabric includes a useful navigation control, the nav bar, that is designed to be used at the top of an interface.</p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="Usage"></a>
+      <p class="ms-font-xxl">Usage</p>
+      <p class="ms-font-l">Like many other controls, the nav bar control is comprised of many elements wrapped in a <code>&lt;div&gt;</code> decorated with the CSS class <code>.ms-NavBar</code>.</p>
+      <p class="ms-font-l">The actual navigation items are implemented within a nexted <code>&lt;ul&gt;</code> list decorated with the class <code>.ms-NavBar-items</code>.</p>
+      <p class="ms-font-l">Each navigation item is added as a <code>&lt;li&gt;</code> with the class <code>.ms-NavBar-item</code>. Within it you add a <code>&lt;a&gt;</code> element with the class <code>.ms-NavBar-link</code> to jump to the target page.</p>
+      <p class="ms-font-l">The menu is also responsive in the sense that in the case of smaller devices that can't show the full menu, it is collapsed to the standard stacked menu. This is done by adding a <code>&lt;div&gt;</code> with the class <code>.ms-NavBar-openMenu</code> just inside the container and use the provided icon <code>.ms-Icon--menu</code>. You will also need some JavaScript as the example below demonstrates to control the opening and closing of the menu.</p>
+      <p class="ms-font-l">You will want to add JavaScript to clear out the placeholder when the control receives focus as shown in the following snippets. An example of this code, using jQuery, can be found in the Office UI Fabric component distribution: <a href="https://github.com/OfficeDev/Office-UI-Fabric/blob/master/dist/components/NavBar/Jquery.NavBar.js" class="ms-Link">Jquery.NavBar.js</a>. This also means that you must include a reference to jQuery as the <code>JQuery.NavBar.js</code> depends on the presence of jQuery.</p>
+
+      <!-- codepen snippet -->
+      <p data-height="358" data-theme-id="19054" data-slug-hash="yYVBoK" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/yYVBoK/'>Office UI Fabric - NavBar</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="Submenu"></a>
+      <p class="ms-font-xxl">Submenu</p>
+      <p class="ms-font-l">The nav bar control can be combined with the <a href="/comonents/contextual-menu" class="ms-Link">contextual menu</a> control to create a submenu. This is done by including the <code>&lt;ul&gt;</code> element with the <code>.ms-ContextualMenu</code> class within the menu item that contains the submenu. You should also decorate the parent menu item with the class <code>.ms-NavBar-item--hasMenu</code>.</p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="Search"></a>
+      <p class="ms-font-xxl">Search Menu</p>
+      <p class="ms-font-l">One feature many menus have is the ability to search straight from the navigation. The nav bar supports this as well. Simply add the CSS classes <code>.ms-NavBar-item--search ms-u-hiddenSm</code> to the menu item and then add a <a href="/components/list-item/" class="ms-Link">text field</a>to the inner list item.</p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="Disabled"></a>
+      <p class="ms-font-xxl">Disabled Items</p>
+      <p class="ms-font-l">Menu items can also be disabled in the nav bar. This is done by adding the CSS class <code>.is-disabled</code> to the menu item. Refer to the demo above to see an example.</p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="RightAligned"></a>
+      <p class="ms-font-xxl">Right-Aligned Items</p>
+      <p class="ms-font-l">The nav bar contorl also supports pinning a menu item to the right of all the other items. This is done by adding the CSS class <code>.ms-NavBar-item--right</code> to the menu item. Refer to the demo above to see an example.</p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+    </article>
+  </div>
+
+  <!-- footer -->
+  <footer id="page-footer" class="ms-Grid-row ms-Grid-col ms-u-sm12 ms-font-m ms-fontWeight-light ms-fontColor-white">
+    <p>Microsoft, Office, Office 365 and SharePoint are registered trademarks of Microsoft Corporation.</p>
+    <p>Current Version of the Office UI Fabric used on this site: v1.0.0</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

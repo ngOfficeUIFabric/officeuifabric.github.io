@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>Office UI Fabric - Components - Contextual Menu</title>
+  <meta charset="UTF-8">
+  <!-- fav icons -->
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+
+  <!-- azure application insights -->
+  <script src="/js/azure-app-insights.js" type="text/javascript"></script>
+  
+  <!-- codepen -->
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
+  <link rel="stylesheet" href="/css/styles.min.css" />
+</head>
+
+<body>
+<div class="ms-Grid">
+  <!-- header -->
+  <header id="page-header" class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <div id="brand-name" class="ms-font-su ms-fontWeight-semibold ms-fontColor-white">
+      Office Fabric UI
+    </div>
+    <div id="site-tagline" class="ms-font-l ms-fontColor-white ms-fontWeight-light">
+      Demos of the front-end framework for building experiences using Office, Office 365 &amp; SharePoint.
+    </div>
+  </header>
+
+  <!-- navigation -->
+  <nav class="ms-Grid-row ms-Grid-col ms-u-sm12">
+    <ul id="global-nav">
+      <li class="ms-font-l ms-fontWeight-light"><a href="/">Home</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/features">Features</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/components">Components</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/resources.html">Resources</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/status.html">Status</a></li>
+      <li class="ms-font-l ms-fontWeight-light"><a href="/contribute.html">Contribute!</a></li>
+    </ul>
+  </nav>
+
+  <div class="ms-Grid-row">
+    <!-- side-nav -->
+    <aside id="local-nav" class="ms-Grid-col ms-u-sm-3 ">
+      <ul>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Top">Contextual Menu</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Usage">Usage</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Submenus">Submenus</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Dividers">Dividers</a></li>
+        <li><a class="ms-font-l ms-fontColor-neutralSecondaryAlt" href="#Headings">Headings &amp; Multi-select</a></li>
+      </ul>
+    </aside>
+  
+    <!-- page body -->
+    <article id="page-main" class="ms-Grid-col ms-u-sm9 ms-font-m">
+      <a name="Top"></a>
+      <p class="ms-font-su"><a href="/components" class="ms-Link">Components</a> <i class="ms-Icon ms-Icon--caretRight" aria-hidden="true"></i> Contextual Menu</p>
+      <p class="ms-font-l">The Office UI Fabric contains a contextual menu, or a right-click menu, that can be used on pages or within other controls like the <a href="/components/nav-bar" class="ms-Link">Nav Bar</a> control.</p>
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="Usage"></a>
+      <p class="ms-font-xxl">Usage</p>
+      <p class="ms-font-l">The contextual menu is implemented as a <code>&lt;ul&gt;</code> list decorated with the <code>.ms-ContextualMenu</code> class. It isn't visible by default but when the css class <code>.is-open</code> class is added to the <code>&lt;ul&gt;</code> element, the menu is made visible.</p>
+      <p class="ms-font-l">Each list item is implemented as a <code>&lt;li&gt;</code> decorated with the CSS class <code>.ms-ContextualMenu-item</code> class. You can indicate if an item is currently selected by setting the <code>.is-selected</code> class on the nested <code>&lt;a&gt;</code> tag, or mark it as disabled using the <code>.is-disabled</code> class.</p>
+      <p class="ms-font-l">You will want to add JavaScript to clear out the placeholder when the control receives focus as shown in the following snippets. An example of this code, using jQuery, can be found in the Office UI Fabric component distribution: <a href="https://github.com/OfficeDev/Office-UI-Fabric/blob/master/src/components/ContextualMenu/Jquery.ContextualMenu.js" class="ms-Link">Jquery.ContextualMenu.js</a>. This also means that you must include a reference to jQuery as the <code>JQuery.ContextualMenu.js</code> depends on the presence of jQuery.</p>
+
+      <!-- codepen snippet -->
+      <p data-height="333" data-theme-id="19054" data-slug-hash="wKoeVN" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/wKoeVN/'>Office UI Fabric - Context Menu (Standard)</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="Submenus"></a>
+      <p class="ms-font-xxl">Submenus</p>
+      <p class="ms-font-l">To implement a submenu in the contextual menu control you simply next another contextual menu control within the list item that contains the menu item that should open it. You will likely want to add some extra styling, such as an icon, to indicate there's a submenu as shown in the following snippet:</p>
+
+      <!-- codepen snippet -->
+      <p data-height="334" data-theme-id="19054" data-slug-hash="rOWzBe" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/rOWzBe/'>Office UI Fabric - Context Menu (Submenu)</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="Dividers"></a>
+      <p class="ms-font-xxl">Dividers</p>
+      <p class="ms-font-l">To add a divider in the menu, add another <code>&lt;li&gt;</code> to the menu, but add the CSS class <code>.ms-ContextualMenu-item--divider</code> with nothing else in the item as shown in the following example:</p>
+
+      <!-- codepen snippet -->
+      <p data-height="393" data-theme-id="19054" data-slug-hash="pjNroo" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/pjNroo/'>Office UI Fabric - Context Menu (Dividers)</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+      <a name="Headings"></a>
+      <p class="ms-font-xxl">Headings and Multi-select</p>
+      <p class="ms-font-l">Add a non-selectable heading to the menu for groups of items, typically seperated with dividers, by adding another <code>&lt;li&gt;</code> item and add the CSS class <code>.ms-ContextualMenu-item--header</code>. In addition you can make the menu items multi-selectable by adding the CSS class <code>.ms-ContextualMenu--multiselect</code> which lets you pick check-marks next to multiple list items. This class should be added to the top-level <code>&lt;ul&gt;</code> element.</p>
+
+      <!-- codepen snippet -->
+      <p data-height="469" data-theme-id="19054" data-slug-hash="rOWzNL" data-default-tab="result" data-user="andrewconnell" class='codepen'>See the Pen <a href='http://codepen.io/andrewconnell/pen/rOWzNL/'>Office UI Fabric - Context Menu (Headings+Multiselect)</a> by Andrew Connell (<a href='http://codepen.io/andrewconnell'>@andrewconnell</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <!-- /codepen snippet -->
+
+      <p class="ms-font-l"><i class="ms-Icon ms-Icon--chevronsUp"></i><a href="#Top" class="ms-Link">Back to top</a></p>
+
+    </article>
+  </div>
+
+  <!-- footer -->
+  <footer id="page-footer" class="ms-Grid-row ms-Grid-col ms-u-sm12 ms-font-m ms-fontWeight-light ms-fontColor-white">
+    <p>Microsoft, Office, Office 365 and SharePoint are registered trademarks of Microsoft Corporation.</p>
+    <p>Current Version of the Office UI Fabric used on this site: v1.0.0</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
